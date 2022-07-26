@@ -7,7 +7,7 @@ class Solution:
         dp = np.diag(np.ones(len(s), dtype=int))
         al, ar = 0, 0
         for r in range(1, len(s)):
-            for l in range(r - 1, -1, -1):
+            for l in range(r):
                 if s[l] != s[r]:
                     continue
                 elif r - l == 1 or dp[l + 1][r - 1]:
